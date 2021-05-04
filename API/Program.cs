@@ -14,10 +14,12 @@ namespace API
 {
     public class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
-            var host = CreateHostBuilder(args).Build();
+            CreateHostBuilder(args).Build().Run();
+            //for this, need change to  " public static async Task Main(string[] args)"
+            //var host = CreateHostBuilder(args).Build();
+            /*
             using var scope = host.Services.CreateScope();
             var services = scope.ServiceProvider;
             try
@@ -32,7 +34,8 @@ namespace API
                 var logger = services.GetRequiredService<ILogger<Program>>();
                 logger.LogError(ex,"An error occured during migration");
             }
-            await host.RunAsync();
+            */
+            //await host.RunAsync();
 
         }
 
