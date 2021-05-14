@@ -17,7 +17,8 @@ namespace API.Controllers
         [Authorize]
         [HttpGet("auth")]
         public ActionResult<string> GetSecret(){
-            return "secure text";
+
+            return "401";
         }
 
         [HttpGet("not-found")]
